@@ -1,7 +1,7 @@
 <?php 
-    $host = "localhost";
+    $host = "";
     $database = "hotel";
-    $user = "d2023p";
-    $password = "RG-1905032121118826";
+    $user = "";
+    $password = "";
     $conection = mysqli_connect($host, $database, $user, $password) or die("Couldn't connect to" . $host . "/" . $database . "/");
 ?>

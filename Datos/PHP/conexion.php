@@ -1,7 +1,10 @@
 <?php 
-    $host = "";
+    $host = "localhost";
     $database = "hotel";
-    $user = "";
+    $user = "root";
     $password = "";
-    $conection = mysqli_connect($host, $database, $user, $password) or die("Couldn't connect to" . $host . "/" . $database . "/");
+    $connection = mysqli_connect($host, $database, 
+    $user, $password) or trigger_error(mysql_error(),E_USER_ERROR);//die("Couldn't connect to" . $host . "/" . $database . "/");
+    $_POST['connection'] = $connection;
+    //header('Location: ./consulta.php?conection=$conection');
 ?>

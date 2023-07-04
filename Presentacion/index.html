@@ -53,5 +53,22 @@
             </div>
         </section>
     </div>
+    <script>
+    fetch('../PHP/test_con.php',{
+        method: 'POST'
+    })
+    .then(res=>
+    res.text()
+    )
+    .then(data => {
+        debugger;
+        console.log(data);
+    })
+            .catch(function(error) {
+                debugger;
+                alert("Ocurrió un error: " + error.message);
+                console.error("¡Error! ", error);
+            });
+    </script>
 </body>
 </html>

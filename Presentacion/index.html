@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/style.css">
     <title>Inicio</title>
+    <script src="../Logica/producto.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
     <div class="background-image">
@@ -50,25 +52,30 @@
                     </div>
                     <input type="submit" value="Buscar" name="subBuscar" id="subBuscar" placeholder="Buscar">
                 </form>
+                <link rel="stylesheet" href="../Datos/PHP/testcon.php">
             </div>
         </section>
     </div>
     <script>
-    fetch('../PHP/test_con.php',{
-        method: 'POST'
-    })
-    .then(res=>
-    res.text()
-    )
-    .then(data => {
-        debugger;
-        console.log(data);
-    })
-            .catch(function(error) {
-                debugger;
-                alert("Ocurrió un error: " + error.message);
-                console.error("¡Error! ", error);
-            });
+    try {
+        fetch('../Datos/PHP/testcon.php')
+        .then(res=>{ debugger;
+        res.text()}
+        )
+       .then(data => {
+            debugger;
+            console.log(data);
+        })
+        .catch(function(error) {
+            debugger;
+            alert("Ocurrió un error: " + error.message);
+            console.error("¡Error! ", error);
+        });
+    }
+    catch(error){
+        console.error(error);
+        debugger
+    }
     </script>
 </body>
 </html>

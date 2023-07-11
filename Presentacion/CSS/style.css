@@ -1,0 +1,11 @@
+* {
+    background-color: burlywood;
+}
+h1 {
+    position: relative;
+    color: white;
+}
+
+.pageTitle{
+    background-color: black;
+}

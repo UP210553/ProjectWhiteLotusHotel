@@ -14,3 +14,21 @@ let variable=document.getElementById("").value;
         debugger;
     })
 }
+function GuardarProductoAjax() {
+    $.ajax({
+        url: 'php/insert.php',
+        type: 'POST',
+        data: {
+            nombre: 'Hello',
+            marca: 'World',
+
+        },
+        contentType: 'application/json; charset=utf8',
+        success: function(response){
+            alert(response.status);
+        },
+        error: function(error){
+            alert("error: " + error);
+        }
+    })
+}

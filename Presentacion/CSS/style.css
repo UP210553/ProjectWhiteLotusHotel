@@ -1,4 +1,16 @@
 * {
+<<<<<<< HEAD
+    background-color: burlywood;
+}
+h1 {
+    position: relative;
+    color: white;
+}
+
+.pageTitle{
+    background-color: black;
+}
+=======
     margin-top: 5px;
     margin-left: 5px;
     margin-right: 5px;
@@ -126,3 +138,4 @@ form {
 .center-h {
     justify-content: center;
 }
+>>>>>>> 1eb35e2b821df04c8bcf14e2494e353b43da7aa6

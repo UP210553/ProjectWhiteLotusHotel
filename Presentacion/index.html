@@ -9,12 +9,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
+    <section>
     <div class="background-image">
         <div class="container center-h center-v">
             <h1>Golden Sands Resorts</h1>
         </div>
         <div style="height: 150px; overflow: hidden; margin: 0; margin-right: 5px;margin-top: -5px;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C150.00,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #00E1D9;"></path></svg></div>
-        <section>
             <div style="height: 150px; overflow: hidden; margin-left: -5px; margin-right: 0;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C150.00,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #00E1D9;"></path></svg></div>
             <div class="body-container">
                 <form action="insert.php" method="post">
@@ -41,7 +41,7 @@
                         <div class="input-space">
                             <input type="date" name="dateFechaSalida" id="dateFechaSalida">
                         </div>
-                    </div>
+                    </div>  
                     <div class="accompaniment">
                         <div class="label-space">
                             <label id="lblCantidadPersonas">Cantidad de personas</label>
@@ -54,8 +54,8 @@
                 </form>
                 <link rel="stylesheet" href="../Datos/PHP/testcon.php">
             </div>
-        </section>
     </div>
+    </section>
     <script>
     try {
         fetch('../Datos/PHP/testcon.php')

@@ -245,6 +245,31 @@ LOCK TABLES `TR_Reservacion` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `Usuarios`
+--
+
+DROP TABLE IF EXISTS `Usuarios`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Usuarios` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Usuario` varchar(100) NOT NULL,
+  `Contraseña` varchar(100) NOT NULL,
+  `Estatus` bit(1) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Usuarios`
+--
+
+LOCK TABLES `Usuarios` WRITE;
+/*!40000 ALTER TABLE `Usuarios` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Usuarios` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping routines for database 'hotel'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -257,4 +282,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-03  9:17:20
+-- Dump completed on 2023-07-25 19:10:07

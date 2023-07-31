@@ -29,7 +29,7 @@ CREATE TABLE `TC_Paquetes` (
   `Descripcion` varchar(100) NOT NULL,
   `Estatus` bit(1) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,6 +38,7 @@ CREATE TABLE `TC_Paquetes` (
 
 LOCK TABLES `TC_Paquetes` WRITE;
 /*!40000 ALTER TABLE `TC_Paquetes` DISABLE KEYS */;
+INSERT INTO `TC_Paquetes` VALUES (1,'Paquete 1',1000,'Prueba',''),(2,'Paquete 2',2000,'Prueba',''),(3,'Paquete 3',3000,'Prueba','');
 /*!40000 ALTER TABLE `TC_Paquetes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -55,7 +56,7 @@ CREATE TABLE `TC_Servicios` (
   `Descripcion` varchar(100) NOT NULL,
   `Estatus` bit(1) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,6 +65,7 @@ CREATE TABLE `TC_Servicios` (
 
 LOCK TABLES `TC_Servicios` WRITE;
 /*!40000 ALTER TABLE `TC_Servicios` DISABLE KEYS */;
+INSERT INTO `TC_Servicios` VALUES (1,'Internet',200,'Inalámbrico',''),(2,'Comida',100,'Sabrosa',''),(3,'Alberca',50,'Divertida','');
 /*!40000 ALTER TABLE `TC_Servicios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -81,7 +83,7 @@ CREATE TABLE `TC_TipoHabitacion` (
   `Precio` decimal(10,0) NOT NULL,
   `Estatus` bit(1) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -90,6 +92,7 @@ CREATE TABLE `TC_TipoHabitacion` (
 
 LOCK TABLES `TC_TipoHabitacion` WRITE;
 /*!40000 ALTER TABLE `TC_TipoHabitacion` DISABLE KEYS */;
+INSERT INTO `TC_TipoHabitacion` VALUES (1,'Habitación 1',2,500,''),(2,'Habitación 2',4,700,''),(3,'Habitación 3',6,800,'');
 /*!40000 ALTER TABLE `TC_TipoHabitacion` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -106,7 +109,7 @@ CREATE TABLE `TC_Ubicacion` (
   `Direccion` varchar(100) NOT NULL,
   `Estatus` bit(1) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -115,6 +118,7 @@ CREATE TABLE `TC_Ubicacion` (
 
 LOCK TABLES `TC_Ubicacion` WRITE;
 /*!40000 ALTER TABLE `TC_Ubicacion` DISABLE KEYS */;
+INSERT INTO `TC_Ubicacion` VALUES (1,'Ciudad 1','Dirección 1',''),(2,'Ciudad 2','Dirección 2',''),(3,'Ciudad 3','Dirección 3','');
 /*!40000 ALTER TABLE `TC_Ubicacion` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -130,14 +134,14 @@ CREATE TABLE `TR_DatosHuespedes` (
   `NombreHuesped` varchar(100) NOT NULL,
   `FechaNacimiento` date NOT NULL,
   `Correo` varchar(100) NOT NULL,
-  `NumeroTelefono` int(11) NOT NULL,
+  `NumeroTelefono` varchar(11) NOT NULL,
   `Direccion` varchar(100) NOT NULL,
   `Ciudad` varchar(100) NOT NULL,
   `Estado` varchar(100) NOT NULL,
   `Pais` varchar(100) NOT NULL,
   `Estatus` bit(1) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -146,6 +150,7 @@ CREATE TABLE `TR_DatosHuespedes` (
 
 LOCK TABLES `TR_DatosHuespedes` WRITE;
 /*!40000 ALTER TABLE `TR_DatosHuespedes` DISABLE KEYS */;
+INSERT INTO `TR_DatosHuespedes` VALUES (1,'Huesped 1','1990-09-19','correo1@correo','4494494949','Dirección 1','Ciudad 1','Estado 1','Pais 1',''),(2,'Huesped 2','1990-09-19','correo2@correo','4494494949','Dirección 2','Ciudad 2','Estado 2','Pais 2',''),(3,'Huesped 3','1990-09-19','correo3@correo','4494494949','Dirección 3','Ciudad 3','Estado 3','Pais 3','');
 /*!40000 ALTER TABLE `TR_DatosHuespedes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -159,12 +164,12 @@ DROP TABLE IF EXISTS `TR_DisponibilidadHabitacion`;
 CREATE TABLE `TR_DisponibilidadHabitacion` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `id_TipoHabitacion` int(11) NOT NULL,
-  `Disponibilidad` varchar(100) NOT NULL,
+  `Disponibilidad` int(11) NOT NULL,
   `Estatus` bit(1) DEFAULT NULL,
   PRIMARY KEY (`Id`),
   KEY `TR_DisponibilidadHabitacion_FK` (`id_TipoHabitacion`),
   CONSTRAINT `TR_DisponibilidadHabitacion_FK` FOREIGN KEY (`id_TipoHabitacion`) REFERENCES `TC_TipoHabitacion` (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -173,6 +178,7 @@ CREATE TABLE `TR_DisponibilidadHabitacion` (
 
 LOCK TABLES `TR_DisponibilidadHabitacion` WRITE;
 /*!40000 ALTER TABLE `TR_DisponibilidadHabitacion` DISABLE KEYS */;
+INSERT INTO `TR_DisponibilidadHabitacion` VALUES (1,1,4,''),(2,2,4,''),(3,3,4,'');
 /*!40000 ALTER TABLE `TR_DisponibilidadHabitacion` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -192,7 +198,7 @@ CREATE TABLE `TR_MetdoPago` (
   PRIMARY KEY (`Id`),
   KEY `TR_MetdoPago_FK` (`id_DatosHuespedes`),
   CONSTRAINT `TR_MetdoPago_FK` FOREIGN KEY (`id_DatosHuespedes`) REFERENCES `TR_DatosHuespedes` (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -201,6 +207,7 @@ CREATE TABLE `TR_MetdoPago` (
 
 LOCK TABLES `TR_MetdoPago` WRITE;
 /*!40000 ALTER TABLE `TR_MetdoPago` DISABLE KEYS */;
+INSERT INTO `TR_MetdoPago` VALUES (1,1,'Tarjeta',3000,''),(2,2,'Contado',2000,''),(3,3,'Contado',3000,'');
 /*!40000 ALTER TABLE `TR_MetdoPago` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -232,7 +239,7 @@ CREATE TABLE `TR_Reservacion` (
   CONSTRAINT `TR_Reservacion_FK_2` FOREIGN KEY (`id_TipoHabitacion`) REFERENCES `TC_TipoHabitacion` (`Id`),
   CONSTRAINT `TR_Reservacion_FK_3` FOREIGN KEY (`id_Ubicacion`) REFERENCES `TC_Ubicacion` (`Id`),
   CONSTRAINT `TR_Reservacion_FK_4` FOREIGN KEY (`id_Servicios`) REFERENCES `TC_Servicios` (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -241,32 +248,65 @@ CREATE TABLE `TR_Reservacion` (
 
 LOCK TABLES `TR_Reservacion` WRITE;
 /*!40000 ALTER TABLE `TR_Reservacion` DISABLE KEYS */;
+INSERT INTO `TR_Reservacion` VALUES (1,1,1,1,1,1,'2023-07-23','2023-07-27',''),(2,2,2,2,2,2,'2023-07-23','2023-07-27',''),(3,3,3,3,3,3,'2023-07-23','2023-07-27','');
 /*!40000 ALTER TABLE `TR_Reservacion` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `Usuarios`
+-- Table structure for table `TR_UbicacionTH`
 --
 
-DROP TABLE IF EXISTS `Usuarios`;
+DROP TABLE IF EXISTS `TR_UbicacionTH`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Usuarios` (
+CREATE TABLE `TR_UbicacionTH` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `User` varchar(100) NOT NULL,
-  `Password` varchar(100) NOT NULL,
+  `Id_TipoHabitacion` int(11) NOT NULL,
+  `Id_Ubicacion` int(11) NOT NULL,
+  `Cantidad` int(11) NOT NULL,
   `Estatus` bit(1) NOT NULL,
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  PRIMARY KEY (`Id`),
+  KEY `TR_UbicacionTH_FK` (`Id_TipoHabitacion`),
+  KEY `TR_UbicacionTH_FK_1` (`Id_Ubicacion`),
+  CONSTRAINT `TR_UbicacionTH_FK` FOREIGN KEY (`Id_TipoHabitacion`) REFERENCES `TC_TipoHabitacion` (`Id`),
+  CONSTRAINT `TR_UbicacionTH_FK_1` FOREIGN KEY (`Id_Ubicacion`) REFERENCES `TC_Ubicacion` (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Usuarios`
+-- Dumping data for table `TR_UbicacionTH`
 --
 
-LOCK TABLES `Usuarios` WRITE;
-/*!40000 ALTER TABLE `Usuarios` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Usuarios` ENABLE KEYS */;
+LOCK TABLES `TR_UbicacionTH` WRITE;
+/*!40000 ALTER TABLE `TR_UbicacionTH` DISABLE KEYS */;
+INSERT INTO `TR_UbicacionTH` VALUES (1,1,1,2,''),(2,1,2,4,''),(3,1,3,4,''),(4,2,1,4,''),(5,2,2,4,''),(6,2,3,4,''),(7,3,1,4,''),(8,3,2,4,''),(9,3,3,4,'');
+/*!40000 ALTER TABLE `TR_UbicacionTH` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `TR_Usuarios`
+--
+
+DROP TABLE IF EXISTS `TR_Usuarios`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `TR_Usuarios` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Usuario` varchar(100) NOT NULL,
+  `Contraseña` varchar(100) NOT NULL,
+  `Estatus` bit(1) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `TR_Usuarios`
+--
+
+LOCK TABLES `TR_Usuarios` WRITE;
+/*!40000 ALTER TABLE `TR_Usuarios` DISABLE KEYS */;
+INSERT INTO `TR_Usuarios` VALUES (1,'Usuario 1','wqwdasdasd',''),(2,'Usuario 2','awdsadsdass',''),(3,'Usuario 3','asdasfdsfsaff','');
+/*!40000 ALTER TABLE `TR_Usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -282,4 +322,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-13 15:41:06
+-- Dump completed on 2023-07-26 19:19:11

@@ -1,4 +1,4 @@
-class Producto{
+class Reservacion{
     constructor(){
         this.id_reservacion=0;
         this.id_huesped=0;

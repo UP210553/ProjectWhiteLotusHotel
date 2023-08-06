@@ -28,16 +28,62 @@ class Producto{
 
     }
 
-    set(marca){
+        setid_habitacion(id_habitacion){
         debugger;
-        this.marca=marca;
+        this.id_habitacion=id_habitacion;
         return this;
     }
 
-    GetMarca(){
-        return this.marca;
+    Getid_habitacion(){
+        return this.id_habitacion;
 
     }
+
+    setid_ubicacion(id_ubicacion){
+        debugger;
+        this.id_ubicacion=id_ubicacion;
+        return this;
+    }
+
+    Getid_ubicacion(){
+        return this.id_ubicacion;
+
+    }
+
+       setid_paquetes(id_paquetes){
+        debugger;
+        this.id_paquetes=id_paquetes;
+        return this;
+    }
+
+    Getid_paquetes(){
+        return this.id_paquetes;
+
+    }
+
+       set_FechaInicio(FechaInicio){
+        debugger;
+        this.FechaInicio=this.FechaInicio;
+        return this;
+    }
+
+    Get_FechaInicio(){
+        return this.FechaInicio;
+
+    }
+
+       set_FechaFinal(FechaFinal){
+        debugger;
+        this.FechaFinal=FechaFinal;
+        return this;
+    }
+
+    Get_FechaFinal(){
+        return this.FechaFinal;
+
+    }
+
+   
 
     GuardarProducto(clave){
 

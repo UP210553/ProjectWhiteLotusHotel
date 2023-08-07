@@ -31,16 +31,16 @@ def hacerPago():
         cuenta = request.json['cuenta']
         clave = request.json['clave']
         mycursor.execute("SELECT Id FROM Clientes WHERE cuenta \
-                          = " + cuenta + " AND clave = " + clave)
+                          = '" + cuenta + "' AND clave = '" + clave +"';")
         myresult = mycursor.fetchone()
         if myresult == None or myresult == "":
-            return str("Cuenta no registrada")
+            return jsonify(str("Cuenta no registrada"))
         else:
-            return str(myresult)
+            return jsonify(myresult)
     except NameError as msg:
-        print(msg)
+        return jsonify(str(msg))
     else:
-        print("Sin conexión")
+        return jsonify(str("Sin conexión"))
 
 
 if __name__ == "__main__":

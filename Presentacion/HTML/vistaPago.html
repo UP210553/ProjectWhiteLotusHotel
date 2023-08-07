@@ -4,28 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/stylePago.css">
-    <script>
-        const API = process.env.BANK_API;
-        const cuenta = document.getElementById('count');
-        const clave = document.getElementById('ping Rate'); //  
-        console.log(clave, cuenta);
-        const hacerPago = async (e) => {
-            e.preventDefault();
-            
-            const res = fetch(`${API}/pago`,{
-                method:'POST',
-                headers:{
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    cuenta,
-                    clave
-                })
-            })
-            const data = await res.text();
-            console.log(data);
-        }
-    </script>
+    <script src="../../Logica/JS/conection.js"></script>
     <title>Pago</title>
 </head>
 <body>
@@ -33,7 +12,7 @@
         <div class="principal_container">
             <div class="entry_container">
                     <h1>Pagos</h1>
-                <form method="post">
+                <form name="pago" id="form-pago" method="post" >
                     <div class="one">
                         <div class="etiquetas_entrada">
                             <label for="">Nombre</label>
@@ -48,13 +27,15 @@
                     </div>
                     <div class="three">
                         <div class="etiquetas_entrada">
-                            <label for="">CSV</label>
+                            <label for="">CSV</label><br>
                             <input placeholder="Código de seguridad" type="text" name="ping" id="ping" minlength="3" maxlength="3">
                         </div>
                     </div>
                     <div class="four">
                         <div class="boton_pago">
-                            <input type="submit" name="btn_pago" id="btn_pago" 
+                            <input type="button" 
+                            name="btn_pago" 
+                            id="btn_pago" 
                             value="Pagar"
                             onclick="Hola();">
                         </div>
@@ -63,5 +44,11 @@
             </div>
         </div>
     </section>
+    <script>
+        const res = Hola();
+        if (res != null){
+            alert('Listo. ' + res);
+        }
+    </script>
 </body>
 </html>

@@ -8,10 +8,10 @@ if ($con->connect_error) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $Email = $_POST["email"];
+    $Email = $_POST["Email"];
     $password = $_POST["password"];
 
-    $sql = "SELECT * FROM tr_usuarios WHERE Email = '$Email' AND Contraseña = '$password'";
+    $sql = "SELECT * FROM tr_datoshuespedes WHERE Email = '$Email' AND Contrasena = '$password'";
     $result = $con->query($sql);
 
     if ($result->num_rows == 1) {

@@ -27,12 +27,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $con->close();
+
 }
 
 VerificarCredenciales();
 
 
-class Habitacion {
+/*class Habitacion {
     public $habitacion;
 
     public function __contruct($habitacion) {
@@ -54,7 +55,7 @@ class Habitacion {
 }
 
 
-$habit = new Habitacion("hola");
+$habit = new Habitacion("hola");*/
 
 ?>
 

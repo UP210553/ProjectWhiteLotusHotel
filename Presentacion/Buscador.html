@@ -23,11 +23,7 @@
                 <form action="insert.php" method="post">
                     <div class="accompaniment">-->
 
-            <div>
-                <h3> <a href="">Iniciar sesion</a> </h3>
-                <h3> <a href="">Registrate</a> </h3>
-
-            </div>
+        
             <div class="label-space">
                 <label id="lblUbicacion">Ubicación</label>
             </div>
@@ -71,13 +67,9 @@
                 <input type="text" name="txtCantidadPersonas" id="txtCantidadPersonas"
                     placeholder="Ingreasa la cantidad de personas">
             </div>
-            <button onclick="LeeHuesped()">AAA</button>
+
         </div>
         
-        <script>
-            var huesped = new Huespedes();
-            huesped.LeeHuesped();
-        </script>
 
         <!--<input type="submit" value="Buscar" name="subBuscar" id="subBuscar" placeholder="Buscar">-->
         <button id="ObtenerUbicacion" onclick="llevarUbicacion()">Buscar</button>
@@ -86,34 +78,6 @@
         <script src="../Logico/BuscarCiudad.js"></script>
         
         
-        
-        <!--<select>
-                  
-                <link rel="stylesheet" href="../Datos/PHP/testcon.php">
-            </div>
-    </div>
-    </section>
-    <script>
-    try {
-        fetch('../Datos/PHP/testcon.php')
-        .then(res=>{ debugger;
-        res.text()}
-        )
-       .then(data => {
-            debugger;
-            console.log(data);
-        })
-        .catch(function(error) {
-            debugger;
-            alert("Ocurrió un error: " + error.message);
-            console.error("¡Error! ", error);
-        });
-    }
-    catch(error){
-        console.error(error);
-        debugger
-    }
-    </script>-->
 </body>
 
 </html>

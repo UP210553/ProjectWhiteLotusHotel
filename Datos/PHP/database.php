@@ -3,14 +3,14 @@
 
 function connection(){
     $host = "localhost";
-    $user = "root";
-    $pass = "";
+    $user = "d2023p";
+    $pass = "RG-1905032121118826";
 
-    $bd = "db_hotel";
+    $bd = "hotel";
 
     $connect=mysqli_connect($host, $user, $pass);
 
-    mysqli_select_db($connect, $bd);
+    mysqli_select_db($bd);
 
     return $connect;
 

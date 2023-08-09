@@ -13,7 +13,7 @@
     <span><a href="..\..\index.php">Iniciar sesión</a></span>
     </div>
 <div>
-    <form action="InsertSignup.php" method="post">
+    <form action="..\..\Datos/PHP/InsertSignup.php" method="post">
         <input type="text" name="Nombrehuesped" placeholder="Ingresa tu nombre">
         <input type="text" name="Apellidos" placeholder="Ingresa tus Apellidos">
         <input type="date" name="FechaNacimiento" placeholder="Ingreasa tu fecha de nacimiento">

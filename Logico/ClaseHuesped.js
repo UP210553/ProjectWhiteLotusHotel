@@ -54,5 +54,29 @@ class Huespedes{
          alert("El producto ha sido guardado");
         return this;
     }
+    LeeHuesped(){
+        fetch('../Datos/PHP/PruebaJson.php',
+        {
+            method:'POST'
+        })
+            .then(response =>{
+                debugger;
+                if(response.ok){
+
+                    console.log(response)
+                    debugger;
+                    return response.text();
+                }
+
+            })
+            .then(elem => {
+                console.log(elem)
+                debugger;
+
+                var datoshuesped = JSON.parse(elem);
+                console.log(datoshuesped);
+            });
+        
+    }
 
 }

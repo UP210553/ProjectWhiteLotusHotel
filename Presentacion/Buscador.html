@@ -8,6 +8,7 @@
     <title>Inicio</title>
    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src ="../Logico/ClaseHuesped.js"> </script>
 </head>
 
 <body>
@@ -70,12 +71,20 @@
                 <input type="text" name="txtCantidadPersonas" id="txtCantidadPersonas"
                     placeholder="Ingreasa la cantidad de personas">
             </div>
+            <button onclick="LeeHuesped()">AAA</button>
         </div>
+        
+        <script>
+            var huesped = new Huespedes();
+            huesped.LeeHuesped();
+        </script>
+
         <!--<input type="submit" value="Buscar" name="subBuscar" id="subBuscar" placeholder="Buscar">-->
         <button id="ObtenerUbicacion" onclick="llevarUbicacion()">Buscar</button>
         </form>
 
         <script src="../Logico/BuscarCiudad.js"></script>
+        
         
         
         <!--<select>

@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <link rel="stylesheet" href="Presentacion/CSS/index.css">
+    <title>Document</title>
+    
 </head>
 <body>
-<div class="titulo-registro" >
+<div>
 <h1>Iniciar sesión</h1>
 <span><a href="Presentacion/HTML/signup.php">Registrate</a></span>
 </div>
 <div>
     <form action="Datos/PHP/VerificarCredenciales.php" method="post">
         <input type="text" name="email" placeholder="Ingresa el correo electronico">
-        <label for="password">Contraseña</label>
         <input type="password" name="password" placeholder="Ingresa la contraseña">
         <input type="submit" value="Iniciar sesión">
     </form>

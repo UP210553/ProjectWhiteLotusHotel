@@ -1,8 +1,6 @@
 <?php
 include("database.php");
 
-
-
 $con = connection();
 $sql = "SELECT id, NombreHuesped, Email FROM tr_datoshuespedes where Email='osvi@gmail.com' and Contrasena='1234'";
 $result = $con->query($sql);

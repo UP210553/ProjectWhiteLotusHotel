@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__."/../Datos/PHP/database.php";
+include("database.php");
 
 function VerificarCredenciales(){
 
@@ -17,11 +17,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $con->query($sql);
 
     if ($result->num_rows == 1) {
-        header("Location: /ProjectWhiteLotusHotel/Presentacion/Buscador.html");
+        session_start();
+        $_SESSION["mail"] = $Email;
+        $_SESSION["pass"] = $password;
+        header("Location: /ProjectWhiteLotusHotel/Datos/PHP/ejemploclase.php");
         //return true;
 
     } else {
+        
         echo ("no se pudo");
+        header("Location: ../index.php");
       //return false;
     }
 }

@@ -1,10 +1,13 @@
 <?php
-include("database.php");
+session_start();
+include("VerificarCredenciales.php");
+//include("database.php");
 
-
+$Email = $_SESSION['mail'];
+$password = $_SESSION['pass'];
 
 $con = connection();
-$sql = "SELECT id, NombreHuesped, Email FROM tr_datoshuespedes where Email='osvi@gmail.com' and Contrasena='1234'";
+$sql = "SELECT id, NombreHuesped, Email FROM tr_datoshuespedes where Email='$Email' and Contrasena='$password'";
 $result = $con->query($sql);
 
 class Usuario {
@@ -16,6 +19,8 @@ class Usuario {
 $usuarios = array();
 
 if ($result->num_rows > 0) {
+
+    
     while ($row = $result->fetch_assoc()) {
         $usuario = new Usuario();
         $usuario->id = $row["id"];
@@ -23,15 +28,14 @@ if ($result->num_rows > 0) {
         $usuario->correo = $row["Email"];
         
         $usuarios[] = $usuario;
+        
     }
+    
+    header ("Location: ../../Presentacion/Buscador.html");
 } else {
     echo "No se encontraron resultados.";
 }
 
-foreach ($usuarios as $usuario) {
-    echo "ID: " . $usuario->id . "<br>";
-    echo "Nombre: " . $usuario->nombre . "<br>";
-    echo "Correo: " . $usuario->correo . "<br><br>";
-}
+
 ?>
 

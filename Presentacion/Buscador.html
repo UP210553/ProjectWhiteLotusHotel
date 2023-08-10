@@ -59,13 +59,17 @@
                 <input type="date" name="dateFechaSalida" id="dateFechaSalida">
             </div>
         </div>
+        <div class="label-space">
+            <label id="lblUbicacion">Tipo de habitacion</label>
+        </div>
         <div class="accompaniment">
-            <div class="label-space">
-                <label id="lblCantidadPersonas">Cantidad de personas</label>
-            </div>
-            <div class="input-space">
-                <input type="text" name="txtCantidadPersonas" id="txtCantidadPersonas"
-                    placeholder="Ingreasa la cantidad de personas">
+            <select id="Ubicacion">
+                <option disabled selected value="">Escoge el tipo de habitación...</option>
+                <option value="Pareja">Pareja(2 personas)</option>
+                <option value="FamiliaChica">Familia chica(4 personas)</option>
+                <option value="FamiliaGrande">Familia grande (6 personas)</option>
+                
+            </select>
             </div>
 
         </div>

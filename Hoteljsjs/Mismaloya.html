@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mismaloya</title>
+    <style>
+        
+        body {
+            background-color: #ecebeb;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .contenedorP {
+            width: 100%;
+        }
+
+        .contenedorimagenes {
+            border-radius: 22px;
+            max-width: fit-content;
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            padding-left: 30px;
+            background-color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .img1 {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: 375px;
+            height: 295px;
+            border-radius: 22px;
+            object-fit: cover;
+        }
+
+        .contenedorsection {
+            margin-top: 5px;
+            display: flex; /* Utilizamos flex para distribuir las imágenes de manera uniforme */
+            flex-wrap: wrap;
+            gap: 5px;
+            width: calc(66.666% - 5px); /* 66.666% del ancho total menos el espacio entre las imágenes */
+            height: 295px; /* Igualamos la altura al contenedor de la imagen grande */
+        }
+
+        .img2,
+        .img3 {
+            width: calc(33.333% - 5px); /* 33.333% del ancho total menos el espacio entre las imágenes */
+            height: calc(50% - 2.5px); /* 50% del alto del contenedorsection menos el espacio entre las imágenes */
+            border-radius: 22px;
+            object-fit: cover;
+        }
+
+        .contenedoropciones {
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            height: 35px;
+            max-width: 1180px;
+            margin-top: 1px;
+            background-color: #fff;
+            display: flex;
+            font-family: "Gill Sans Extrabold", Helvetica, sans-serif
+            
+        }
+
+        .botonopciones {
+            font-size: 15px;
+            cursor: pointer;
+            justify-content: left;
+        }
+        .contenedorInfo
+        {
+            border-radius: 22px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            max-width: 1180px;
+            margin-top: 1px;
+            background-color: #fff;
+            justify-content: left;
+            align-items: center;
+
+
+        }
+        .info
+        {
+            font-family: Arial, sans-serif;
+            padding-left: 50px;
+            padding-right: 100px;
+            padding-top: 15px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap"/>
+</head>
+<body>
+    <div class="contenedorP">
+        <div class="contenedorimagenes">
+            <div class="img1">
+                <img src="./imagenes/MISimg.jpg" width="100%" height="100%">
+            </div>
+            <div class="contenedorsection">
+                <div class="img2">
+                    <img src="./imagenes/MISimg2.jpg" width="100%" height="100%">
+                </div>
+                <div class="img2">
+                    <img src="./imagenes/MISimg3.jpg" width="100%" height="100%">
+                </div>
+                <div class="img2">
+                    <img src="./imagenes/MSIimg5.jpg" width="100%" height="100%">
+                </div>
+                <div class="img3">
+                    <img src="./imagenes/MISimg6.jpg" width="100%" height="100%">
+                </div>
+                <div class="img3">
+                    <img src="./imagenes/MISimg7.jpg" width="100%" height="100%">
+                </div>
+                <div class="img3">
+                    <img src="./imagenes/MZimg7.jpg" width="100%" height="100%">
+                </div>
+            </div>
+        </div>
+        
+        <div class="contenedoropciones">
+            <div class="botonopciones" onMouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="padding-left: 30px; font-size: 15px; padding-top: 8px;">
+                Resumen
+            </div>
+            <div class="botonopciones" onMouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="padding-left: 50px; font-size: 15px; padding-top: 8px;">
+                Ubicación
+            </div>
+            <div class="botonopciones" onMouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="padding-left: 50px; font-size: 15px; padding-top: 8px;">
+                Paquetes
+            </div>
+        </div>
+        <div class="contenedorInfo">
+            <h1 style="padding-left: 15px; font-family: 'Roboto', sans-serif; padding-top: 20px;">Mismaloya </h1> 
+            
+            <section class="info">
+                <h3>Playas serenas y naturaleza exuberante</h3>
+                <p>Mismaloya te ofrece playas de arena suave y aguas cristalinas, rodeadas de la belleza de la naturaleza. La Playa Mismaloya te invita a relajarte bajo el sol, mientras que la Playa Las Ánimas es perfecta para explorar el entorno en kayak.</p>
+              </section>
+              <section class="info">
+                <h3>Aventuras en la naturaleza</h3>
+                <p>Embárcate en emocionantes aventuras de senderismo por la selva, que te llevarán a cascadas ocultas y observatorios con vistas panorámicas. ¡No te pierdas la oportunidad de avistar ballenas y delfines en su hábitat natural durante ciertas temporadas del año!</p>
+              </section>
+              <section class="info">
+                <h3>Cultura y gastronomía auténtica</h3>
+                <p>Explora los mercados locales y disfruta de la rica tradición mexicana en Mismaloya. La gastronomía es una combinación de sabores tradicionales y mariscos frescos que te deleitarán en los restaurantes locales.</p>
+              </section>
+              <section class="info">
+                <h3>Relajación y desconexión</h3>
+                <p>Nuestros alojamientos en Mismaloya te ofrecen la oportunidad de desconectar y relajarte en un entorno pacífico. Desde cabañas en la playa hasta resorts de lujo con vistas al océano, elige la experiencia que mejor se adapte a ti.</p>
+              </section>
+               
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29873.157384537582!2d-105.21250795361327!3d20.622959046615502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842145635063c87f%3A0x79cfbf9985bf5274!2sPuerto%20Vallarta%2C%20Jal.!5e0!3m2!1ses!2smx!4v1690762018161!5m2!1ses!2smx" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+               
+
+        </div>
+    </div>
+</body>
+</html>
+
+
+

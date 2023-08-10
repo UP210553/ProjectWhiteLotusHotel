@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $con->query($sql);
 
     if ($result->num_rows == 1) {
-        header("Location: /ProjectWhiteLotusHotel/Presentacion/Buscador.html");
+        header("Location: ..\Presentacion/Buscador.html");
         //return true;
 
     } else {

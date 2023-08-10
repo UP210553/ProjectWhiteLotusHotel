@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Email = $_POST["email"];
     $password = $_POST["password"];
 
-    $sql = "SELECT * FROM tr_datoshuespedes WHERE Email = '$Email' AND Contrasena = '$password'";
+    $sql = "SELECT * FROM TR_DatosHuespedes WHERE Correo = '".$Email."' AND Contraseña = '".$password."'";
     $result = $con->query($sql);
 
     if ($result->num_rows == 1) {

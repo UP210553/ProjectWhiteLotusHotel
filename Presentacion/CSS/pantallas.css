@@ -1,0 +1,90 @@
+body {
+    background-color: #ecebeb;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+iframe {
+    height: 20rem;
+    width: 25rem;
+}
+
+.contenedorP {
+    width: 100%;
+}
+
+.contenedorimagenes {
+    border-radius: 22px;
+    max-width: fit-content;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding-left: 30px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.img1 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 375px;
+    height: 295px;
+    border-radius: 22px;
+    object-fit: cover;
+}
+
+.contenedorsection {
+    margin-top: 5px;
+    display: flex; /* Utilizamos flex para distribuir las imágenes de manera uniforme */
+    flex-wrap: wrap;
+    gap: 5px;
+    width: calc(66.666% - 5px); /* 66.666% del ancho total menos el espacio entre las imágenes */
+    height: 295px; /* Igualamos la altura al contenedor de la imagen grande */
+}
+
+.img2,
+.img3 {
+    width: calc(33.333% - 5px); /* 33.333% del ancho total menos el espacio entre las imágenes */
+    height: calc(50% - 2.5px); /* 50% del alto del contenedorsection menos el espacio entre las imágenes */
+    border-radius: 22px;
+    object-fit: cover;
+}
+
+.contenedoropciones {
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 35px;
+    max-width: 1180px;
+    margin-top: 1px;
+    background-color: #fff;
+    display: flex;
+    font-family: "Gill Sans Extrabold", Helvetica, sans-serif
+    
+}
+
+.botonopciones {
+    font-size: 15px;
+    cursor: pointer;
+    justify-content: left;
+}
+.contenedorInfo
+{
+    border-radius: 22px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1180px;
+    margin-top: 1px;
+    background-color: #fff;
+    justify-content: left;
+    align-items: center;
+
+
+}

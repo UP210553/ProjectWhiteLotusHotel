@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <title>Index</title>
+    <link rel="stylesheet" href="Presentacion/CSS/index.css">
 </head>
 <body>
-<div>
+<div class="titulo-registro" >
 <h1>Iniciar sesión</h1>
 <span><a href="Presentacion/HTML/signup.php">Registrate</a></span>
 </div>
-<div>
+<div class="entry">
     <form action="Logico/VerificarCredenciales.php" method="post">
+        <label for="email">Correo</label>
         <input type="text" name="email" placeholder="Ingresa el correo electronico">
+        <label for="password">Contraseña</label>
         <input type="password" name="password" placeholder="Ingresa la contraseña">
         <input type="submit" value="Iniciar sesión">
     </form>

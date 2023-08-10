@@ -1,143 +1,158 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body
-        {
-            background-color: #cac0c0;
-        }
-        .contenedorP
-        {
-            width: 100%;
-            height: auto;
+        
+        body {
+            background-color: #ecebeb;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .contenedorimagenes
-        {
-            float: left;
-            border-radius:22px;
+        .contenedorP {
+            width: 100%;
+        }
+
+        .contenedorimagenes {
+            border-radius: 22px;
             max-width: fit-content;
             width: 85%;
-            height: 330px;
-            margin-left: 50px;
+            margin-left: auto;
+            margin-right: auto;
             margin-top: 50px;
             padding-left: 30px;
             background-color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
 
-        }
-        .contenedorsection
-        {
-            float: left;
-            position: relative;
-            width: auto;
-            height: auto;
-        }
-        .img1
-        {
-            
-            padding-top: 10px;
-            float: left;
-            position: relative;
-            
-            width: 400px;
+        .img1 {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: 375px;
             height: 295px;
+            border-radius: 22px;
+            object-fit: cover;
         }
-        .img2
-        {
-            padding-top: 10px;
-            margin-left: 10px;
-            position: relative;
-            float: left;
-            width: 230px;
-            height: 150px;
-            
+
+        .contenedorsection {
+            margin-top: 5px;
+            display: flex; /* Utilizamos flex para distribuir las imágenes de manera uniforme */
+            flex-wrap: wrap;
+            gap: 5px;
+            width: calc(66.666% - 5px); /* 66.666% del ancho total menos el espacio entre las imágenes */
+            height: 295px; /* Igualamos la altura al contenedor de la imagen grande */
         }
-        .img3
-        {
-            padding-top: 10px;
-            margin-left: 10px;
-            position: relative;
-            float: left;
-            width: 230px;
-            height: 150px;
-            
+
+        .img2,
+        .img3 {
+            width: calc(33.333% - 5px); /* 33.333% del ancho total menos el espacio entre las imágenes */
+            height: calc(50% - 2.5px); /* 50% del alto del contenedorsection menos el espacio entre las imágenes */
+            border-radius: 22px;
+            object-fit: cover;
         }
-        .contenedoropciones
-        {
-            float: left;
-            border-radius:22px;
-            margin-left: 50px;
-            width: 1180px;
-            height: 60px;
+
+        .contenedoropciones {
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            height: 35px;
+            max-width: 1180px;
             margin-top: 1px;
             background-color: #fff;
-        }
-        .botonopciones
-        {
-            font-size: 20px;
-            float: left;
-            margin-top: 16px;
-            margin-left: 60px;    
+            display: flex;
+            font-family: "Gill Sans Extrabold", Helvetica, sans-serif
             
+        }
+
+        .botonopciones {
+            font-size: 15px;
+            cursor: pointer;
+            justify-content: left;
+        }
+        .contenedorInfo
+        {
+            border-radius: 22px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            max-width: 1180px;
+            margin-top: 1px;
+            background-color: #fff;
+            justify-content: left;
+            align-items: center;
+
 
         }
-        
-       
+
     </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap"/>
 </head>
+<body>
     <div class="contenedorP">
         <div class="contenedorimagenes">
             <div class="img1">
-                <img src="/imagenes/imgHotel2.jpg" width="400px" height="310px">
+                <img src="./imagenes/MZimg.jpg" width="100%" height="100%">
             </div>
             <div class="contenedorsection">
                 <div class="img2">
-                    <img src="/imagenes/imgHotel1.jpg" width="230px" height="150px">
+                    <img src="./imagenes/MZimg2.jpg" width="100%" height="100%">
                 </div>
                 <div class="img2">
-                    <img src="/imagenes/imgHotel1.jpg" width="230px" height="150px">
+                    <img src="./imagenes/MZimg3.jpg" width="100%" height="100%">
                 </div>
                 <div class="img2">
-                    <img src="/imagenes/imgHotel1.jpg" width="230px" height="150px">
+                    <img src="./imagenes/MZimg4.jpg" width="100%" height="100%">
                 </div>
-            </div>
-            <div class="contenedorsection">
-            <div class="img3">
-                <img src="/imagenes/imgHotel1.jpg" width="230px" height="150px">
-            </div>
-            <div class="img3">
-                <img src="/imagenes/imgHotel1.jpg" width="230px" height="150px">
-            </div>
-            <div class="img3">
-                <img src="/imagenes/imgHotel1.jpg" width="230px" height="150px">
+                <div class="img3">
+                    <img src="./imagenes/MZimg5.jpg" width="100%" height="100%">
+                </div>
+                <div class="img3">
+                    <img src="./imagenes/MZimg6.jpg" width="100%" height="100%">
+                </div>
+                <div class="img3">
+                    <img src="./imagenes/MZimg7.jpg" width="100%" height="100%">
+                </div>
             </div>
         </div>
         
+        <div class="contenedoropciones">
+            <div class="botonopciones" onMouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="padding-left: 30px; font-size: 15px; padding-top: 8px;">
+                Resumen
+            </div>
+            <div class="botonopciones" onMouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="padding-left: 50px; font-size: 15px; padding-top: 8px;">
+                Ubicación
+            </div>
+            <div class="botonopciones" onMouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="padding-left: 50px; font-size: 15px; padding-top: 8px;">
+                Paquetes
+            </div>
+        </div>
+        <div class="contenedorInfo">
+            <h1 style="padding-left: 15px; font-family: 'Roboto', sans-serif; padding-top: 20px;">Mazatlán</h1>
+            
+            <p style="padding-left: 70px; padding-right:  70px; font-family: 'Roboto', sans-serif; padding-top: 10px; font-size: 13px;">Descubre Mazatlán, un destino lleno de encanto que combina playas espectaculares, cultura rica y una hospitalidad cálida. Nuestra selección de hoteles y resorts te brindará una experiencia única y memorable en este destino de ensueño.
+
+                Playas paradisíacas: Mazatlán cuenta con kilómetros de playas doradas y aguas cristalinas, perfectas para relajarte bajo el sol o disfrutar de emocionantes actividades acuáticas.<br> Desde la Playa Olas Altas, ideal para surfear y observar impresionantes puestas de sol, hasta la extensa Playa Brujas, donde podrás relajarte en un ambiente más tranquilo, cada playa ofrece algo especial.
+                
+                Cultura y tradición: Sumérgete en la rica cultura de Mazatlán explorando el Centro Histórico, con sus calles empedradas y arquitectura colonial. Descubre la majestuosa Catedral de Mazatlán y déjate cautivar por las coloridas celebraciones y festivales que muestran la alegría y el folclore mexicano.
+                
+                Gastronomía deliciosa: Deléitate con los sabores auténticos de la cocina mexicana y los frescos mariscos que Mazatlán tiene para ofrecer. Nuestros restaurantes locales y de clase mundial te sorprenderán con una amplia variedad de platillos, desde los tradicionales tacos hasta los más exquisitos platillos gourmet.</p>
+
+               
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29873.157384537582!2d-105.21250795361327!3d20.622959046615502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842145635063c87f%3A0x79cfbf9985bf5274!2sPuerto%20Vallarta%2C%20Jal.!5e0!3m2!1ses!2smx!4v1690762018161!5m2!1ses!2smx" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+               
+
+        </div>
     </div>
-    <div class="contenedoropciones">
-        <div class="botonopciones" onMouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="cursor: pointer">
-            Resumen
-        </div>
-        <div class="botonopciones" onMouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="cursor: pointer">
-            Ubicación
-        </div>
-        <div class="botonopciones" onMouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="cursor: pointer">
-            Paquetes
-        </div>
-
-    </div> 
-
-    <div >
-
-    </div>
-
-        
-
-
-<body>
-
 </body>
-</html> -->
+</html>
+
+

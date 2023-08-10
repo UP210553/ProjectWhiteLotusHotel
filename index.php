@@ -22,7 +22,7 @@
 </div>
 
 <?php 
-require_once __DIR__."/Logico/VerificarCredenciales.php";
+/*require_once __DIR__."/Logico/VerificarCredenciales.php";
 $inicioSecion = VerificarCredenciales();
 if($inicioSecion==true){
 ?>
@@ -35,7 +35,8 @@ if($inicioSecion==true){
 <p>esta mal</p>
 <?php 
 
-};
+};*/
 ?>
+
 </body>
 </html>

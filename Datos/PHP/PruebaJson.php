@@ -1,5 +1,5 @@
 <?php
-require_once ("database.php");
+/*require_once ("database.php");
 echo "Sifunciona";
 
 
@@ -28,4 +28,4 @@ msqli_free_result($result);
 
 $connect->close();
 
-//TraerDatosHuespedes()
+//TraerDatosHuespedes()/*

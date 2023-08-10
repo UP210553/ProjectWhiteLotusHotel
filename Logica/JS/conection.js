@@ -1,16 +1,37 @@
-const submit = async (e) => {
-    function Hola() {
-        alert('Hola mundo');
+const API = 'http://localhost:5000'
+function Hola() {
+    if (pago != null) {
+        const cuenta = document.getElementById('count').value;
+        const clave = document.getElementById('ping').value;
+        
+        const pagar = async () => {
+            try {
+                const pago = await fetch(`${API}/pago`, {
+                    method:'POST',
+                    headers:{
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        cuenta,
+                        clave
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data == "Cuenta no registrada"){
+                        alert(data);
+                    }
+                    else{
+                        alert("¡Pago procesado!");
+                        console.log(data);
+                    }
+                })
+            } catch (err) {
+                alert("Error: " + err.message);
+            }
+        }
+        pagar();
+    } else {
+        close();
     }
-    // e.preventDefault(
-    // const res = fetch(`${API}/pago`,{
-    //     method:'POST',
-    //     headers:{
-    //         'Content-Type': 'application/json'
-    //     },
-    //     body: JSON.stringify({
-    //         cuenta,
-    //         clave
-    //     })
-    // })
 }

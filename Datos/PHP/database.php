@@ -2,15 +2,15 @@
 
 
 function connection(){
-    $host = "localhost";
-    $user = "root";
-    $pass = "";
+    $host ="localhost";
+    $user ="root";
+    $pass ="";
 
     $bd = "db_hotel";
 
     $connect=mysqli_connect($host, $user, $pass);
 
-    mysqli_select_db($connect, $bd);
+    mysqli_select_db($connect,$bd);
 
     return $connect;
 

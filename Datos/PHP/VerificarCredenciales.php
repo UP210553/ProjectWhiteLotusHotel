@@ -17,10 +17,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $con->query($sql);
 
     if ($result->num_rows == 1) {
+<<<<<<< HEAD:Datos/PHP/VerificarCredenciales.php
         session_start();
         $_SESSION["mail"] = $Email;
         $_SESSION["pass"] = $password;
         header("Location: /ProjectWhiteLotusHotel/Datos/PHP/ejemploclase.php");
+=======
+        header("Location: ..\Presentacion/Buscador.html");
+>>>>>>> 9d48c5e20795e4955649a739d58dc7fc40d30b90:Logico/VerificarCredenciales.php
         //return true;
 
     } else {

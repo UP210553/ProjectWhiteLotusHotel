@@ -17,54 +17,92 @@
         <div class="label-space">
             <label id="lblUbicacion">Ubicación</label>
         </div>
+        <!-- <form action="../../Datos/PHP/claseUbicacion.php" method="post">
+            <input type="hidden" name="Ubicacion" value="Puerto Vallarta">
+            <button type="submit" name="submit" style="border: none; background: none; padding: 0; height: 200px;">
+                <img src="../../imagenes/puerto vallarta.jpg" alt="puertoVallarta" height="100%" width="100%%">
+            </button>
+        </form>   -->
         <div class="input-space">
-            <form action="../Datos/PHP/claseTipoHabitacion.php" method="POST">
+            <!-- <form action="../Datos/PHP/claseTipoHabitacion.php" method="POST"></form> -->
+            <div>
+                <label>Baja California Norte</label>
+                <form action="../Datos/PHP/BuscarCiudad.php" method="post">
+                    <input type="hidden" name="Ubicacion" value="BajaNorte">
+                    <button type="submit" name="submit" style="border: none; background: none; padding: 0; height: 200px;">
+                        <img src="../imagenes/puerto vallarta.jpg" alt="puertoVallarta" height="100%" width="100%%">
+                    </button>
+                </form>
+            </div>
+            <div>
+                <label>Baja California Sur</label>
+                <form action="../Datos/PHP/BuscarCiudad.php" method="post">
+                    <input type="hidden" name="Ubicacion" value="BajaSur">
+                    <button type="submit" name="submit" style="border: none; background: none; padding: 0; height: 200px;">
+                        <img src="../imagenes/puerto vallarta.jpg" alt="BajaSur" height="100%" width="100%%">
+                    </button>
+                </form>
+            </div>
 
-                <select id="Ubicacion">
-                    <option disabled selected value="">Selecciona un estado...</option>
-                    <option value="BajaNorte" id="0">Baja California Norte</option>
-                    <option value="BajaSur">Baja California Sur</option>
-                    <option value="Guerrero">Guerrero</option>
-                    <option value="Jalico">Jalisco</option>
-                    <option value="Nayarit">Nayarit</option>
-                    <option value="QuintanaRoo">Quintana Roo</option>
-                    <option value="Sinaloa">Sinaloa</option>
-                    <option value="Yucatan">Yucatan</option>
-                </select>
+            <div>
+                <label>Guerrero</label>
+                <form action="../Datos/PHP/BuscarCiudad.php" method="post">
+                    <input type="hidden" name="Ubicacion" value="Guerrero">
+                    <button type="submit" name="submit" style="border: none; background: none; padding: 0; height: 200px;">
+                        <img src="../imagenes/puerto vallarta.jpg" alt="Guerrero" height="100%" width="100%%">
+                    </button>
+                </form>
+            </div>
 
-                <div class="accompaniment">
-                    <div class="label-space">
-                        <label id="lblFechaLlegada">Fecha de llegada</label>
-                    </div>
-                    <div class="input-space">
-                        <input type="date" name="dateFechaLlegada" id="dateFechaLlegada">
-                    </div>
-                </div>
+            <div>
+                <label>Jalisco</label>
+                <form action="../Datos/PHP/BuscarCiudad.php" method="post">
+                    <input type="hidden" name="Ubicacion" value="Jalisco">
+                    <button type="submit" name="submit" style="border: none; background: none; padding: 0; height: 200px;">
+                        <img src="../imagenes/puerto vallarta.jpg" alt="Jalisco" height="100%" width="100%%">
+                    </button>
+                </form>
+            </div>
 
-                <div class="accompaniment">
-                    <div class="label-space">
-                        <label id="lblFechaSalida">Fecha de salida</label>
-                    </div>
-                    <div class="input-space">
-                        <input type="date" name="dateFechaSalida" id="dateFechaSalida">
-                    </div>
-                </div>
+            <div>
+                <label>Nayarit</label>
+                <form action="../Datos/PHP/BuscarCiudad.php" method="post">
+                    <input type="hidden" name="Ubicacion" value="Nayarit">
+                    <button type="submit" name="submit" style="border: none; background: none; padding: 0; height: 200px;">
+                        <img src="../imagenes/puerto vallarta.jpg" alt="Nayarit" height="100%" width="100%%">
+                    </button>
+                </form>
+            </div>
 
-                <div class="label-space">
-                    <label id="lblUbicacion">Tipo de habitacion</label>
-                </div>
-                <div class="accompaniment">
-                    <select id="Ubicacion" name="Ubicacion">
-                        <option disabled selected value="">Escoge el tipo de habitación...</option>
-                        <option value="Pareja">Pareja</option>
-                        <option value="FamiliaChica">Familia chica</option>
-                        <option value="FamiliaGrande">Familia grande</option>
-            
-                    </select>
-                </div>
+            <div>
+                <label>QuintanaRoo</label>
+                <form action="../Datos/PHP/BuscarCiudad.php" method="post">
+                    <input type="hidden" name="Ubicacion" value="QuintanaRoo">
+                    <button type="submit" name="submit" style="border: none; background: none; padding: 0; height: 200px;">
+                        <img src="../imagenes/puerto vallarta.jpg" alt="QuintanaRoo" height="100%" width="100%%">
+                    </button>
+                </form>
+            </div>
+            <div>
+                <label>Sinaloa</label>
+                <form action="../Datos/PHP/BuscarCiudad.php" method="post">
+                    <input type="hidden" name="Ubicacion" value="Sinaloa">
+                    <button type="submit" name="submit" style="border: none; background: none; padding: 0; height: 200px;">
+                        <img src="../imagenes/puerto vallarta.jpg" alt="Sinaloa" height="100%" width="100%%">
+                    </button>
+                </form>
+            </div>
 
-                <button id="ObtenerUbicacion" onclick="llevarUbicacion()">Buscar</button>
-            </form>
+            <div>
+                <label>Yucatan</label>
+                <form action="../Datos/PHP/BuscarCiudad.php" method="post">
+                    <input type="hidden" name="Ubicacion" value="Yucatan">
+                    <button type="submit" name="submit" style="border: none; background: none; padding: 0; height: 200px;">
+                        <img src="../imagenes/puerto vallarta.jpg" alt="Yucatan" height="100%" width="100%%">
+                    </button>
+                </form>
+            </div>
+
         </div>
     </div>
 

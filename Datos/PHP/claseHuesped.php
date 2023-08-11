@@ -7,7 +7,7 @@ $Email = $_SESSION['mail'];
 $password = $_SESSION['pass'];
 
 $con = connection();
-$sql = "SELECT id, NombreHuesped, Email FROM tr_datoshuespedes where Email='$Email' and Contrasena='$password'";
+$sql = "SELECT id, NombreHuesped, Email FROM TR_DatosHuespedes where Email='".$Email."' and Contrasena='".$password."'";
 $result = $con->query($sql);
 
 class Usuario {

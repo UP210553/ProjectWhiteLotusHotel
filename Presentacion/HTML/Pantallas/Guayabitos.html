@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../CSS/pantallas.css">
     <title>Guayabitos</title>
 </head>
+
 <body>
     <div class="contenedorP">
         <div class="contenedorimagenes">
@@ -33,28 +35,81 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="contenedoropciones">
-            <div class="botonopciones" onMouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="padding-left: 30px; font-size: 15px; padding-top: 8px;">
+            <div class="botonopciones" onMouseover="this.style.color='blue'" onmouseout="this.style.color='black'"
+                style="padding-left: 30px; font-size: 15px; padding-top: 8px;">
                 Resumen
             </div>
-            <div class="botonopciones" onMouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="padding-left: 50px; font-size: 15px; padding-top: 8px;">
+            <div class="botonopciones" onMouseover="this.style.color='blue'" onmouseout="this.style.color='black'"
+                style="padding-left: 50px; font-size: 15px; padding-top: 8px;">
                 Ubicación
             </div>
-            <div class="botonopciones" onMouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="padding-left: 50px; font-size: 15px; padding-top: 8px;">
+            <div class="botonopciones" onMouseover="this.style.color='blue'" onmouseout="this.style.color='black'"
+                style="padding-left: 50px; font-size: 15px; padding-top: 8px;">
                 Paquetes
             </div>
         </div>
         <div class="contenedorInfo">
             <h1 style="padding-left: 15px; font: sans-serif; padding-top: 20px;">Guayabitos</h1>
-        
-            <p style="padding: 30px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, fugit provident culpa reprehenderit molestiae quas, repellendus veritatis aspernatur harum ut ratione error aliquid corporis, vel recusandae sequi non unde maiores. 
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum ratione itaque perspiciatis sunt, commodi ducimus illum.
-                Aperiam consectetur nesciunt, quos voluptas natus minus unde laudantium deserunt ex voluptatum sunt magni. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Consequatur delectus fugit veniam neque quos, ad provident ea et at accusamus nisi. Veritatis optio non consequatur nam, est aliquam quisquam eos?</p>
 
-               
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14846.660505626112!2d-105.00083329999998!3d21.5208329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84273511479b7e49%3A0xdcddee4a17756474!2s63507%20Guayabitos%2C%20Nay.!5e0!3m2!1ses!2smx!4v1691582977816!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p style="padding: 30px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, fugit
+                provident culpa reprehenderit molestiae quas, repellendus veritatis aspernatur harum ut ratione error
+                aliquid corporis, vel recusandae sequi non unde maiores.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum ratione itaque perspiciatis sunt,
+                commodi ducimus illum.
+                Aperiam consectetur nesciunt, quos voluptas natus minus unde laudantium deserunt ex voluptatum sunt
+                magni. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Consequatur delectus fugit veniam neque quos, ad provident ea et at accusamus nisi. Veritatis optio non
+                consequatur nam, est aliquam quisquam eos?</p>
 
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14846.660505626112!2d-105.00083329999998!3d21.5208329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84273511479b7e49%3A0xdcddee4a17756474!2s63507%20Guayabitos%2C%20Nay.!5e0!3m2!1ses!2smx!4v1691582977816!5m2!1ses!2smx"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+    </div>
+
+    <section>
+        <h2>Realiza una reservación</h2>
+        <div>
+            <div class="accompaniment">
+                <div class="label-space">
+                    <label id="lblFechaLlegada">Fecha de llegada</label>
+                </div>
+                <div class="input-space">
+                    <input type="date" name="dateFechaLlegada" id="dateFechaLlegada">
+                </div>
+            </div>
+
+            <div class="accompaniment">
+                <div class="label-space">
+                    <label id="lblFechaSalida">Fecha de salida</label>
+                </div>
+                <div class="input-space">
+                    <input type="date" name="dateFechaSalida" id="dateFechaSalida">
+                </div>
+            </div>
+
+            <div class="label-space">
+                <label id="lblUbicacion">Tipo de habitacion</label>
+            </div>
+
+            <div class="accompaniment">
+                <select id="Ubicacion" name="Ubicacion">
+                    <option disabled selected value="">Escoge el tipo de habitación...</option>
+                    <option value="Pareja">Pareja</option>
+                    <option value="FamiliaChica">Familia chica</option>
+                    <option value="FamiliaGrande">Familia grande</option>
+
+                </select>
+            </div>
+
+            <button id="ObtenerUbicacion" onclick="llevarUbicacion()">Buscar</button>
+        </div>
+    </section>
 </body>
+
 </html>

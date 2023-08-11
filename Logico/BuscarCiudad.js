@@ -14,7 +14,7 @@ function llevarUbicacion(){
     else if(ciudad=="Guerrero"){
         url="../Presentacion/HTML/Guerrero.html";
     }
-    else if(ciudad=="Jalico"){
+    else if(ciudad=="Jalisco"){
         url="../Presentacion/HTML/Jalisco.html";
     }
     else if(ciudad=="Nayarit"){
@@ -30,7 +30,7 @@ function llevarUbicacion(){
         url="../Presentacion/HTML/yucatan.html";
     }
     else {
-        url="../Presentacion/index.html";
+        url="../Presentacion/Buscador.html";
     }
     
     window.location.href=url;

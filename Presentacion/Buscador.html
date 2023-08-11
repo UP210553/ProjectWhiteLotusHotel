@@ -6,29 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="./CSS/style.css"> -->
     <title>Inicio</title>
-   
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src ="../Logico/ClaseHuesped.js"> </script>
+    <script src="../Logico/ClaseHuesped.js"> </script>
 </head>
 
 <body>
-    <section>
-    <div class="background-image">
-        <div class="container center-h center-v">
-            <h1>Golden Sands Resorts</h1>
-            <!--</div>
-        <div style="height: 150px; overflow: hidden; margin: 0; margin-right: 5px;margin-top: -5px;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C150.00,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #00E1D9;"></path></svg></div>
-            <div style="height: 150px; overflow: hidden; margin-left: -5px; margin-right: 0;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C150.00,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #00E1D9;"></path></svg></div>
-            <div class="body-container">
-                <form action="insert.php" method="post">
-                    <div class="accompaniment">-->
-
-        
-            <div class="label-space">
-                <label id="lblUbicacion">Ubicación</label>
-            </div>
-            <div class="input-space">
-
+    <div class="container center-h center-v">
+        <h1>Golden Sands Resorts</h1>
+        <div class="label-space">
+            <label id="lblUbicacion">Ubicación</label>
+        </div>
+        <div class="input-space">
+            <form action="../Datos/PHP/claseTipoHabitacion.php" method="POST">
 
                 <select id="Ubicacion">
                     <option disabled selected value="">Selecciona un estado...</option>
@@ -41,47 +31,48 @@
                     <option value="Sinaloa">Sinaloa</option>
                     <option value="Yucatan">Yucatan</option>
                 </select>
-            </div>
-        </div>
-        <div class="accompaniment">
-            <div class="label-space">
-                <label id="lblFechaLlegada">Fecha de llegada</label>
-            </div>
-            <div class="input-space">
-                <input type="date" name="dateFechaLlegada" id="dateFechaLlegada">
-            </div>
-        </div>
-        <div class="accompaniment">
-            <div class="label-space">
-                <label id="lblFechaSalida">Fecha de salida</label>
-            </div>
-            <div class="input-space">
-                <input type="date" name="dateFechaSalida" id="dateFechaSalida">
-            </div>
-        </div>
-        <div class="label-space">
-            <label id="lblUbicacion">Tipo de habitacion</label>
-        </div>
-        <div class="accompaniment">
-            <select id="Ubicacion">
-                <option disabled selected value="">Escoge el tipo de habitación...</option>
-                <option value="Pareja">Pareja(2 personas)</option>
-                <option value="FamiliaChica">Familia chica(4 personas)</option>
-                <option value="FamiliaGrande">Familia grande (6 personas)</option>
-                
-            </select>
-            </div>
 
+                <div class="accompaniment">
+                    <div class="label-space">
+                        <label id="lblFechaLlegada">Fecha de llegada</label>
+                    </div>
+                    <div class="input-space">
+                        <input type="date" name="dateFechaLlegada" id="dateFechaLlegada">
+                    </div>
+                </div>
+
+                <div class="accompaniment">
+                    <div class="label-space">
+                        <label id="lblFechaSalida">Fecha de salida</label>
+                    </div>
+                    <div class="input-space">
+                        <input type="date" name="dateFechaSalida" id="dateFechaSalida">
+                    </div>
+                </div>
+
+                <div class="label-space">
+                    <label id="lblUbicacion">Tipo de habitacion</label>
+                </div>
+                <div class="accompaniment">
+                    <select id="Ubicacion" name="Ubicacion">
+                        <option disabled selected value="">Escoge el tipo de habitación...</option>
+                        <option value="Pareja">Pareja</option>
+                        <option value="FamiliaChica">Familia chica</option>
+                        <option value="FamiliaGrande">Familia grande</option>
+            
+                    </select>
+                </div>
+
+                <button id="ObtenerUbicacion" onclick="llevarUbicacion()">Buscar</button>
+            </form>
         </div>
-        
+    </div>
 
-        <!--<input type="submit" value="Buscar" name="subBuscar" id="subBuscar" placeholder="Buscar">-->
-        <button id="ObtenerUbicacion" onclick="llevarUbicacion()">Buscar</button>
-        </form>
+    <!--<input type="submit" value="Buscar" name="subBuscar" id="subBuscar" placeholder="Buscar">-->
 
-        <script src="../Logico/BuscarCiudad.js"></script>
-        
-        
+    <script src="../Logico/BuscarCiudad.js"></script>
+
+
 </body>
 
 </html>

@@ -1,7 +1,6 @@
 var selectElement = document.getElementById("Ubicacion");
 
 function llevarUbicacion(){
-    debugger;
     var ciudad=selectElement.value;
     var url;
     

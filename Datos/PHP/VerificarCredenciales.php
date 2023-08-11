@@ -11,7 +11,7 @@ if ($con->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Email = $_POST["email"];
-    $password = $_POST["password "];
+    $password = $_POST["password"];
 
     $sql = "SELECT * FROM tr_datoshuespedes WHERE Email = '$Email' AND Contrasena = '$password'";
     $result = $con->query($sql);
@@ -20,13 +20,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         session_start();
         $_SESSION["mail"] = $Email;
         $_SESSION["pass"] = $password;
-        header("Location: /ProjectWhiteLotusHotel/Datos/PHP/ejemploclase.php");
+        header("Location: /ProjectWhiteLotusHotel/Datos/PHP/claseHuesped.php");
         //return true;
 
     } else {
         
         echo ("no se pudo");
-        header("Location: ../index.php");
+        // header("Location: /ProjectWhiteLotusHotel/index.php");
       //return false;
     }
 }

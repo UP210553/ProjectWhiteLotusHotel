@@ -1,14 +1,10 @@
 <?php
-<<<<<<< HEAD
 session_start();
 include("VerificarCredenciales.php");
 //include("database.php");
 
 $Email = $_SESSION['mail'];
 $password = $_SESSION['pass'];
-=======
-include("database.php");
->>>>>>> 9d48c5e20795e4955649a739d58dc7fc40d30b90
 
 $con = connection();
 $sql = "SELECT id, NombreHuesped, Email FROM tr_datoshuespedes where Email='$Email' and Contrasena='$password'";
@@ -35,6 +31,7 @@ if ($result->num_rows > 0) {
         
     }
     
+    $_SESSION = [];
     header ("Location: ../../Presentacion/Buscador.html");
 } else {
     echo "No se encontraron resultados.";
